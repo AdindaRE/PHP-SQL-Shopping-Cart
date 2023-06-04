@@ -27,7 +27,7 @@ if (isset($_GET['id'])) {
             &dollar;<?=$product['price']?>
         </span>
         <form action="index.php?page=cart" method="post">
-            <input type="number" name="quantity" value="1" min="1"<?=$product['quantity']?>" placeholder="Quantity" required>
+            <input type="number" name="quantity" value="1" min="1" placeholder="Quantity" required>
             <input type="hidden" name="product_id" value="<?=$product['id']?>">
             <input type="submit" value="Add To Cart">
         </form>

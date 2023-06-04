@@ -115,7 +115,7 @@ if ($products_in_cart) {
                 <tr>
                     <td class="img">
                         <a href="index.php?page=product&id=<?=$product['id']?>">
-                            <img src="imgs/<?=$product['image']?>" width="50" height="50" alt="<?=$product['name']?>">
+                            <img src="imgs/<?=$product['image']?>" width="100" height="140" alt="<?=$product['name']?>">
                         </a>
                     </td>
                     <td>
@@ -167,5 +167,132 @@ if ($products_in_cart) {
         </div>
     </form>
 </div>
+
+<style>.cart.content-wrapper {
+  padding: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  margin-bottom: 20px;
+}
+
+.cart h1 {
+  font-size: 24px;
+  color: #013220;
+  margin-bottom: 20px;
+}
+
+.cart table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart table thead td {
+  font-weight: bold;
+  color: #013220;
+}
+
+.cart table tbody td {
+  vertical-align: middle;
+}
+
+.cart table .img img {
+  width: 100px;
+  height: 140px;
+}
+
+.cart table .img a {
+  text-decoration: none;
+}
+
+.cart table .img a:hover {
+  text-decoration: underline;
+}
+
+.cart table .remove {
+  color: #FF0000;
+  text-decoration: none;
+}
+
+.cart table .remove:hover {
+  text-decoration: underline;
+}
+
+.cart table .price {
+  color: #013220;
+}
+
+.cart table .quantity input {
+  width: 60px;
+  padding: 5px;
+  font-size: 16px;
+  color: #013220;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cart .checkout {
+  margin-top: 20px;
+}
+
+.cart .checkout h2 {
+  font-size: 20px;
+  color: #013220;
+  margin-bottom: 10px;
+}
+
+.cart .checkout label {
+  font-weight: bold;
+  color: #013220;
+}
+
+.cart .checkout input[type="text"],
+.cart .checkout input[type="email"] {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  color: #013220;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.cart .subtotal {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart .subtotal .text {
+  font-weight: bold;
+  color: #013220;
+  font-size: 18px;
+}
+
+.cart .subtotal .price {
+  color: #013220;
+  font-size: 18px;
+}
+
+.cart .buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cart .buttons input[type="submit"] {
+  background-color: #63748e;
+  border: none;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cart .buttons input[type="submit"]:hover {
+  background-color: #4e5c70;
+}
+</style>
 
 <?=template_footer()?>
